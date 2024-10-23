@@ -1,0 +1,105 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.tabs {
+    width: 20%;
+    background-color: #f0f0f0;
+    padding: 15px;
+}
+.tabs .tab {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* 设置字体为黑体 */
+    font-size: 16px; /* 设置字体大小（可根据需要调整） */
+    cursor: pointer; /* 鼠标悬停时显示为指针 */
+    padding: 10px; /* 添加内边距 */
+    /*display: inline-block; /* 使标签在一行显示 */
+    margin-right: 10px; /* 标签之间的间距 */
+    font-weight: bold; /* 将字体加粗 */
+}
+.tabs ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tabs li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tabs li.active {
+    background-color: #ddd;
+}
+.tabs .tab.active {
+    color: purple; /* 设置选中标签的颜色为紫色 */
+    font-weight: bold; /* 可选：加粗选中标签 */
+}
+.tabcontent {
+    width: 80%;
+    padding: 15px;
+}
+.tab-content {
+    display: flex;
+}
+.updates-container {
+    display: flex; /* 使用 Flexbox 布局 */
+    gap: 10px; /* 设置子元素之间的间距为 10px */
+    flex-wrap: wrap; /* 允许换行 */
+}
+.content {
+    background-image: url('images/background.png'); /* 设置背景图片 */
+    background-size: cover; /* 背景图片覆盖整个区域 */
+    background-position: center; /* 背景图片居中 */
+    padding: 50px 0; /* 上下内边距 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    flex-direction: column; /* 垂直排列 */
+}
+.contact-info {
+    border-top: 2px solid #ccc; /* 上边框 */
+    border-bottom: 2px solid #ccc; /* 下边框 */
+    padding: 20px; /* 内边距 */
+    margin: 20px 0; /* 上下外边距 */
+    max-width: 200px; /* 设置最大宽度 */
+}
+.profile {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    background-color: rgba(255, 255, 255, 0.2); /* 半透明背景 */
+    padding: 20px; /* 内边距 */
+    border-radius: 10px; /* 圆角 */
+}
+
+.profile img {
+    margin-right: 20px; /* 头像与文本之间的间距 */
+    width: 100px; /* 头像宽度 */
+    height: 100px; /* 头像高度 */
+}
+.contact-info h2 {
+    font-size: 12px; /* 设置字体大小 */
+    margin-bottom: 10px; /* 设置底部外边距 */
+}
+.hidden {
+    display: none;
+}
+.content-container {
+    display: block; /* 使用 Flexbox 布局 */
+    align-items: flex-start; /* 垂直对齐 */
+    max-width: 200px; /* 设置最大宽度与图片相同 */
+    margin-right: 10px; /* 标签之间的间距 */
+}
+
+.content-container img {
+    width: 100%; /* 图片宽度为 100% */
+    height: auto; /* 保持图片比例 */
+}
+
+.content-container p {
+    margin-left: 10px; /* 图片与文本之间的间距 */
+    flex: 1; /* 使文本占据剩余空间 */
+    word-wrap: break-word; /* 超出宽度时换行 */
+}

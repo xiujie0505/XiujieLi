@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile with Tabs</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- 引入 Font Awesome 图标库 -->
+</head>
+<body>
+    <div class="content">
+        <div class="profile" style="display: flex; align-items: center; justify-content: flex-start; margin-left: auto; margin-right: auto; width: fit-content;"> <!-- {{ edit_1 }} -->
+            <img src="images/head.jpg" alt="Profile Image" style="margin-right: 20px; width: 160px; height: 160px;"> <!-- 修改头像 -->
+            <p>Canan Dagdeviren is an Associate Professor at MIT Media Lab.</p><!-- 简短介绍 -->
+        </div>
+        <!-- Tab content sections -->
+        <!-- ... -->
+    </div>
+<div class="container">
+    <div class="tabs">
+        <ul>
+            <li class="tab" onclick="showTabContent('overview')">Overview</li>
+            <li class="tab" onclick="showTabContent('updates')">Updates</li>
+            <li class="tab" onclick="showTabContent('projects')">Projects</li>
+            <li class="tab" onclick="showTabContent('publications')">Publications</li>
+            <li class="tab" onclick="showTabContent('blogs')">Blogs</li>
+        </ul>
+    </div>
+
+    <div class="tabcontent">
+        <!-- Tab content sections -->
+        <div id="overview" class="tab-content" style="display: block;">
+            <!-- <h2>Overview</h2> -->
+             
+            <!-- <img src="images/overview.jpg" alt="Overview Image" style="width: 100%; max-width: 200px;"> --><!-- 编辑overvieww文本内容 -->
+            <p>Canan Dagdeviren joined the faculty in January 2017 to direct the new Conformable Decoders 
+                research group at the MIT Media Lab. The group will create mechanically adaptive electromechanical 
+                systems that can intimately integrate with the target object for sensing, actuation, and energy harvesting, 
+                among other applications. Dagdeviren believes that vital information from nature and the human body is ‘coded’ 
+                in various forms of physical patterns. Her research focuses on the creation of conformable decoders that can ‘decode’ 
+                these patterns into beneficial signals and/or energy.</p>
+
+        </div>
+        <div id="updates" class="tab-content" style="display: none;">
+            <!-- <h2>Updates</h2> -->
+            <div class="updates-container"> <!-- 新增父容器 -->
+                <div class="content-container" onclick="openPDF('documents/xiujie_design.pdf')"> <!-- 新增点击事件 -->
+                    <img src="images/update1.png" alt="Updates Image" style="width: 100%; max-width: 200px;">
+                    <p>Latest updates on Canan Dagdeviren's research and projects.</p>
+                </div>
+                <div class="content-container" onclick="openPDF('documents/xiujie_design.pdf')">
+                    <img src="images/update1.png" alt="Updates Image" style="width: 100%; max-width: 200px;">
+                    <p>Latest updates on Canan Dagdeviren's research and projects.</p>
+                </div>
+                <div class="content-container" onclick="openPDF('documents/xiujie_design.pdf')">
+                    <img src="images/update1.png" alt="Updates Image" style="width: 100%; max-width: 200px;">
+                    <p>Latest updates on Canan Dagdeviren's research and projects.</p>
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="tab-content" style="display: none;">
+            <!-- <h2>Projects</h2> -->
+            <div class="content-container"> <!-- 新增容器 -->
+                <img src="images/project1.png" alt="Projects Image" style="width: 100%; max-width: 200px;">
+                <p>Details about ongoing and completed projects.</p>
+            </div>
+        </div>
+        <div id="publications" class="tab-content" style="display: none;">
+            <div class="content-container"> <!-- 新增容器 -->
+                <img src="images/publications.jpg" alt="Publications Image" style="width: 100%; max-width: 200px;">
+                <p>A list of publications authored by Canan Dagdeviren.</p>
+            </div>
+
+        </div>
+        <div id="blogs" class="tab-content" style="display: none;">
+            <!-- <h2>Blogs</h2> -->
+            <img src="images/blogs.jpg" alt="Blogs Image" style="width: 100%; max-width: 200px;">
+            <p>Insights and articles written by Canan Dagdeviren.</p>
+
+        </div>
+    </div>
+</div>
+<div class="contact-info"> <!-- 新增联系方式区域 -->
+    <h2>Contact Information</h2>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:example@example.com">example@example.com</a></p> <!-- 邮箱 -->
+    <p><i class="fas fa-globe"></i> <a href="https://www.example.com" target="_blank">www.example.com</a></p> <!-- 网站 -->
+    <!-- <div class="social-icons"> <!-- 社交媒体图标 -->
+        <!-- <i class="fab fa-bilibili"></i> -->
+        <!-- <i class="fab fa-facebook"></i> -->
+        <!-- <i class="fab fa-twitter"></i> -->
+    <!-- </div> -->
+    <p style="display: inline-block; margin-right: 10px;">
+        <a href="https://www.bilibili.com" target="_blank"><i class="fab fa-bilibili"></i> </a>
+    </p> <!-- Bilibili -->
+    <p style="display: inline-block; margin-right: 10px;">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> </a>
+    </p> <!-- Facebook -->
+    <p style="display: inline-block;">
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> </a>
+    </p> <!-- Twitter -->
+</div>
+<script src="script.js"></script>
+</body>
+</html>
